@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plant More Nursery - plants, gardening essentials and Delhi-wide plant delivery.">
+<title>Plant More Nursery | Delhi</title>
+<style>
+:root{--green:#0c6b3f;--dark:#073b28;--light:#eff8f1;--mint:#dff1e4;--gold:#d8aa4b;--text:#173326;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fbfdfb}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5eee8}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark)}
+.brand img{width:54px;height:54px;object-fit:contain;border-radius:12px}.brand span{font-size:18px}
+.navlinks{display:flex;gap:22px;font-size:14px;font-weight:650}.navlinks a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:999px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--green);color:#fff}.btn-light{background:#fff;color:var(--dark);border:1px solid #d8e6dc}.btn-gold{background:var(--gold);color:#172a20}
+.hero{background:radial-gradient(circle at 85% 20%,#cfe9d5 0 16%,transparent 35%),linear-gradient(135deg,#073b28,#0b7142);color:white;padding:72px 0 62px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:38px;align-items:center}.eyebrow{display:inline-block;padding:7px 12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;font-size:13px;font-weight:750}
+h1{font-size:clamp(40px,6vw,72px);line-height:.98;margin:18px 0}.hero p{font-size:18px;line-height:1.65;color:#e4f5e9;max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero-art{min-height:360px;border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-art .leaf{font-size:170px;filter:drop-shadow(0 20px 25px rgba(0,0,0,.22));animation:float 4s ease-in-out infinite}.orb{position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(216,170,75,.18);right:-50px;top:-50px}@keyframes float{50%{transform:translateY(-10px) rotate(-2deg)}}
+section{padding:70px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.section-head h2{font-size:36px;margin:0 0 10px;color:var(--dark)}.section-head p{color:#61766a;line-height:1.6}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:25px;border-radius:22px;background:#fff;border:1px solid #e1ece4;box-shadow:0 12px 30px rgba(20,70,45,.06)}.feature .icon{font-size:30px}.feature h3{margin:12px 0 7px}.feature p{color:#6b7e73;line-height:1.55;margin:0}
+.categories{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:30px}.chip{padding:10px 15px;border-radius:999px;background:var(--mint);color:var(--dark);font-weight:750;border:1px solid #cce5d3}
+.search{max-width:580px;margin:0 auto 30px;display:flex;background:#fff;border:1px solid #dce9df;border-radius:999px;padding:6px}.search input{flex:1;border:0;outline:0;padding:12px 15px;font-size:15px;background:transparent}.search button{border:0;background:var(--green);color:#fff;border-radius:999px;padding:0 18px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid #e0ebe3;border-radius:20px;overflow:hidden;box-shadow:0 10px 26px rgba(15,65,40,.06);transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(15,65,40,.11)}
+.plant-img{height:190px;background:linear-gradient(135deg,#dcefe1,#eef8f0);display:grid;place-items:center;position:relative;overflow:hidden}.plant-img img{width:100%;height:100%;object-fit:cover}.fallback{font-size:68px}.card-body{padding:17px}.card h3{margin:0 0 7px;font-size:17px}.tag{font-size:12px;color:#5f7468}.enquire{margin-top:13px;width:100%;padding:10px;border-radius:11px;background:#e9f6ec;color:var(--dark);font-weight:800;border:0;cursor:pointer}
+.about{background:var(--light)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box{background:#fff;border:1px solid #dcebe0;border-radius:26px;padding:30px}.about h2{font-size:38px;color:var(--dark)}.about p,.about li{color:#60746a;line-height:1.7}.about ul{padding-left:20px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact-card{padding:28px;border-radius:24px;background:#fff;border:1px solid #dfebe2}.contact-card h3{margin-top:0;color:var(--dark)}.contact-card p{line-height:1.7;color:#64786d}.mapbox{min-height:300px;background:linear-gradient(135deg,#dcefe2,#eef8f0);border-radius:24px;border:1px solid #d6e8db;display:grid;place-items:center;text-align:center;padding:25px}.mapbox .pin{font-size:58px}
+footer{background:#062f22;color:#dceee3;padding:35px 0}.footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:center}.small{font-size:13px;color:#a9c5b7}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#19a85b;color:white;font-size:28px;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+@media(max-width:850px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-art{min-height:260px}.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.navlinks{display:none}.nav{height:66px}.brand img{width:48px;height:48px}}
+@media(max-width:500px){.grid{grid-template-columns:1fr 1fr;gap:12px}.plant-img{height:145px}.card-body{padding:13px}.card h3{font-size:15px}.hero{padding:52px 0}.hero-art{min-height:220px}.hero-art .leaf{font-size:110px}section{padding:55px 0}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="#"><img src="logo.jpg" alt="Plant More Nursery logo"><span>PLANT MORE NURSERY</span></a>
+<nav class="navlinks"><a href="#plants">Plants</a><a href="#about">About</a><a href="#location">Location</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+<a class="btn btn-primary" href="https://wa.me/917982380923?text=Hello%20Plant%20More%20Nursery%2C%20I%20want%20to%20enquire%20about%20plants." target="_blank">WhatsApp</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="container hero-grid">
+<div><span class="eyebrow">🌿 Nursery • Plants • Gardening</span><h1>Bring More Green<br>Into Your Life.</h1>
+<p>Welcome to <b>Plant More Nursery</b>. Explore our complete nursery range: plants, fruit & vegetable plants, flowers, medicinal and air-purifying plants, seeds, pots, planters, fertilizers and gardening supplies. <b>Delivery available across Delhi.</b></p>
+<div class="actions"><a class="btn btn-gold" href="#plants">🌱 Explore Plants</a><a class="btn btn-light" href="https://wa.me/917982380923?text=Hello%20Plant%20More%20Nursery%2C%20I%20want%20to%20ask%20about%20plant%20availability%20and%20rates." target="_blank">Ask Plant Rate</a></div>
+</div>
+<div class="hero-art"><div class="orb"></div><div class="leaf">🪴</div></div>
+</div></section>
+
+<section><div class="container"><div class="section-head"><h2>Why Choose Plant More Nursery?</h2><p>A simple place to discover plants and contact us directly for availability and rates.</p></div>
+<div class="features">
+<div class="feature"><div class="icon">🌱</div><h3>Wide Plant Collection</h3><p>Plants, flowers, fruits, vegetables, medicinal & air-purifying plants, seeds, pots, fertilizers and gardening supplies.</p></div>
+<div class="feature"><div class="icon">🚚</div><h3>Delhi-Wide Delivery</h3><p>Plant delivery available across Delhi. Ask us about availability for your area.</p></div>
+<div class="feature"><div class="icon">📲</div><h3>Quick Enquiry</h3><p>Ask for plant availability and current rates directly on WhatsApp or by phone.</p></div>
+</div></div></section>
+
+<section id="plants" style="background:#f5faf6"><div class="container"><div class="section-head"><h2>Explore Our Plants</h2><p>Prices are not displayed online. Tap “Ask Rate” for the current rate and availability. If you need any nursery item, simply ask us on WhatsApp.</p></div>
+<div class="categories"><button class="chip" onclick="filterPlants('all')">All</button><button class="chip" onclick="filterPlants('Indoor')">Indoor</button><button class="chip" onclick="filterPlants('Outdoor')">Outdoor</button><button class="chip" onclick="filterPlants('Flowering')">Flowering</button><button class="chip" onclick="filterPlants('Fruit')">Fruit</button><button class="chip" onclick="filterPlants('Vegetable')">Vegetables</button><button class="chip" onclick="filterPlants('Ornamental')">Ornamental</button></div>
+<div class="search"><input id="search" placeholder="Search a plant e.g. Rose, Money Plant..." oninput="render()"><button onclick="document.getElementById('search').focus()">Search</button></div>
+<div class="grid" id="plantGrid"></div>
+</div></section>
+
+<section id="about" class="about"><div class="container about-grid">
+<div><span class="eyebrow" style="background:#dcefe2;color:#0c6b3f;border-color:#c9e3d0">ABOUT OUR NURSERY</span><h2>Grow greener, live better.</h2><p>Plant More Nursery is a Delhi-based plant nursery serving plant lovers, homes, offices and gardening needs.</p><p>Whether you are looking for an easy-care indoor plant, colourful flowering plants, fruit plants or decorative greenery, contact us for current availability and rates.</p></div>
+<div class="about-box"><h3>Our Services</h3><ul><li>Plants for homes & offices</li><li>Indoor & outdoor greenery</li><li>Flowering & fruit plants</li><li>Plant availability & rate enquiry</li><li>Delhi-wide delivery</li><li>Seeds, pots & gardening essentials</li><li>Home/office plant setup & landscaping enquiries</li></ul><a class="btn btn-primary" href="https://wa.me/917982380923?text=Hello%20Plant%20More%20Nursery%2C%20I%20want%20to%20know%20about%20your%20plants." target="_blank">WhatsApp Enquiry</a></div>
+</div></section>
+
+<section id="location"><div class="container"><div class="section-head"><h2>Visit Our Nursery</h2><p>Open 24 hours. Use the map button for directions to our nursery.</p></div>
+<div class="contact-grid"><div class="mapbox"><div><div class="pin">📍</div><h3>Pratap Vihar Extension</h3><p>Baljeet Vihar Extension, Kirari Suleman Nagar,<br>Delhi – 110086</p><a class="btn btn-primary" href="https://maps.app.goo.gl/yieQTyrWcAcL99UG8?g_st=ac" target="_blank">Get Directions</a></div></div>
+<div class="contact-card"><h3>Plant More Nursery</h3><p><b>📍 Address</b><br>Pratap Vihar Extension, Baljeet Vihar Extension, Kirari Suleman Nagar, Delhi, 110086</p><p><b>🕐 Timing</b><br>Open 24 Hours</p><p><b>🚚 Delivery</b><br>Available across Delhi</p><p><b>📞 Phone</b><br><a href="tel:+917982380923">+91 79823 80923</a></p><div class="actions"><a class="btn btn-primary" href="tel:+917982380923">Call Now</a><a class="btn btn-light" href="https://wa.me/917982380923" target="_blank">WhatsApp</a></div></div>
+</div></div></section>
+
+<section id="reviews"><div class="container"><div class="section-head"><h2>Customer Reviews</h2><p>Have a good experience with Plant More Nursery? Share your feedback with us.</p></div>
+<div class="features">
+<div class="feature"><div class="icon">⭐</div><h3>Plant Quality</h3><p>Explore our nursery collection and ask us about current availability.</p></div>
+<div class="feature"><div class="icon">🚚</div><h3>Delivery</h3><p>Delhi-wide delivery enquiries are welcome.</p></div>
+<div class="feature"><div class="icon">💬</div><h3>Easy Enquiry</h3><p>Contact us on WhatsApp for plant names, rates and availability.</p></div>
+</div></div></section>
+
+<section id="contact" style="background:#f5faf6"><div class="container"><div class="section-head"><h2>Need a Plant?</h2><p>Send us the plant name or a photo of the plant you are looking for. We’ll help with availability and current rate.</p><div class="actions" style="justify-content:center"><a class="btn btn-primary" href="https://wa.me/917982380923?text=Hello%20Plant%20More%20Nursery%2C%20I%20am%20looking%20for%20a%20plant.%20Please%20share%20availability%20and%20rate." target="_blank">💬 WhatsApp Enquiry</a><a class="btn btn-light" href="tel:+917982380923">📞 Call +91 79823 80923</a></div></div></div></section>
+</main>
+
+<footer><div class="container footer-grid"><div><b>🌿 PLANT MORE NURSERY</b><div class="small">Plants • Gardening • Delhi Delivery</div></div><div class="small">© <span id="year"></span> Plant More Nursery</div></div></footer>
+<a class="float-wa" href="https://wa.me/917982380923?text=Hello%20Plant%20More%20Nursery%2C%20I%20want%20to%20enquire%20about%20plants." target="_blank" aria-label="WhatsApp">✆</a>
+
+<script>
+const plants = [
+["Money Plant","Indoor","🪴"],["Snake Plant","Indoor","🌿"],["Peace Lily","Indoor","🌱"],["Areca Palm","Indoor","🌴"],["Spider Plant","Indoor","🌿"],["ZZ Plant","Indoor","🪴"],["Rubber Plant","Indoor","🌿"],["Monstera","Indoor","🍃"],
+["Rose","Flowering","🌹"],["Marigold","Flowering","🌼"],["Hibiscus","Flowering","🌺"],["Jasmine","Flowering","🌸"],["Bougainvillea","Flowering","🌺"],["Chrysanthemum","Flowering","🌼"],["Petunia","Flowering","🌸"],["Adenium","Flowering","🌸"],
+["Mango","Fruit","🥭"],["Guava","Fruit","🍈"],["Lemon","Fruit","🍋"],["Pomegranate","Fruit","🍎"],["Papaya","Fruit","🌴"],["Coconut","Fruit","🥥"],["Orange","Fruit","🍊"],["Fig","Fruit","🪴"],
+["Tomato","Vegetable","🍅"],["Chilli","Vegetable","🌶️"],["Brinjal","Vegetable","🍆"],["Capsicum","Vegetable","🫑"],["Cabbage","Vegetable","🥬"],["Cauliflower","Vegetable","🥦"],["Cucumber","Vegetable","🥒"],["Lady Finger / Okra","Vegetable","🌱"],
+["Neem","Medicinal","🌳"],["Tulsi / Holy Basil","Medicinal","🌿"],["Aloe Vera","Medicinal","🌱"],["Giloy","Medicinal","🌿"],["Ashwagandha","Medicinal","🌱"],["Lemongrass","Medicinal","🌾"],
+["Areca Palm","Air-Purifying","🌴"],["Snake Plant","Air-Purifying","🌿"],["Peace Lily","Air-Purifying","🌱"],["Spider Plant","Air-Purifying","🌿"],["Aloe Vera","Air-Purifying","🌱"],["Rubber Plant","Air-Purifying","🌿"],
+["Ashoka","Outdoor","🌳"],["Neem","Outdoor","🌳"],["Bamboo","Outdoor","🎋"],["Ficus","Outdoor","🌳"],["Plumeria","Outdoor","🌳"],["Palm Trees","Outdoor","🌴"],
+["Croton","Ornamental","🌿"],["Dracaena","Ornamental","🌱"],["Lucky Bamboo","Ornamental","🎋"],["Coleus","Ornamental","🌿"],["Syngonium","Ornamental","🍃"],
+["Flower Seeds","Seeds","🌸"],["Vegetable Seeds","Seeds","🌱"],["Fruit Seeds","Seeds","🍋"],["Herb Seeds","Seeds","🌿"],["Lawn / Grass Seeds","Seeds","🌾"],["Seasonal Seeds","Seeds","🌱"],
+["Plastic Pots","Pots","🪴"],["Ceramic Pots","Pots","🏺"],["Decorative Planters","Pots","🪴"],["Grow Bags","Pots","🌱"],["Hanging Planters","Pots","🪴"],["Seedling Trays","Pots","🌱"],
+["Organic Fertilizer","Fertilizers","🌿"],["Vermicompost","Fertilizers","🌱"],["Potting Mix","Fertilizers","🪴"],["Garden Soil","Fertilizers","🌱"],["Cocopeat","Fertilizers","🥥"],["Neem Cake","Fertilizers","🌿"],
+["Garden Tools","Gardening","🛠️"],["Hand Trowel","Gardening","🔧"],["Pruning Shears","Gardening","✂️"],["Watering Can","Gardening","💧"],["Plant Support Sticks","Gardening","🌱"],["Gardening Accessories","Gardening","🪴"]
+];
+let current="all";
+function filterPlants(cat){current=cat;render();}
+function render(){
+ const q=(document.getElementById("search").value||"").toLowerCase();
+ const list=plants.filter(p=>(current==="all"||p[1]===current)&&p[0].toLowerCase().includes(q));
+ document.getElementById("plantGrid").innerHTML=list.map(p=>`
+ <article class="card"><div class="plant-img"><div class="fallback">${p[2]}</div></div>
+ <div class="card-body"><h3>${p[0]}</h3><div class="tag">${p[1]} Plant</div>
+ <button class="enquire" onclick="ask('${p[0]}')">💬 Ask Rate & Availability</button></div></article>`).join("");
+}
+function ask(name){
+ const msg=`Hello Plant More Nursery, I want to enquire about ${name}. Please share current rate and availability.`;
+ window.open("https://wa.me/917982380923?text="+encodeURIComponent(msg),"_blank");
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
